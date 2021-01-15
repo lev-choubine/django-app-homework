@@ -1,0 +1,20 @@
+{% load static %}
+
+<div>
+ <h2>This is the sound page</h2>
+ <p>Here are your track below</p>
+ <a href="/sounds/create/">Create a new sound</a>
+ {% block content%}
+    {% for sound in sounds %}
+       <div class="bando">
+          <p>Name: {{ sound.name }}</p>
+          <p>Sound: {{ sound.link }}</p>
+          <p>Desc: {{ sound.description }}</p>
+       </div>
+       <a  href="{% url 'sounds_update' sound.id%}">Update Details</a>
+       <a  href="{% url 'sounds_delete' sound.id%}">Delete Sound</a>
+
+
+    {% endfor %} 
+ {% endblock %}   
+</div>

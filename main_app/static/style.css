@@ -1,0 +1,14 @@
+body {
+    background-color: bisque;
+}
+
+h1 {
+    color: blueviolet;
+}
+
+#bando {
+    background-color: cadetblue;
+    margin: 4px;
+    text-align: center;
+    border-radius: 5px;
+}
